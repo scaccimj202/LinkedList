@@ -40,4 +40,15 @@
         sizeOfList++;
     }
 
+    /**
+     * Method inserts a new node into the LinkedList.
+     * @param new_ element to be added to the LinkedList
+     */
+    public void insert(E new_){
+        current.setNext(new Node<E>(new_, current.getNext()));
+        if(tail == current)
+            tail = current.getNext();
+        sizeOfList++;
+    }
+
  }
