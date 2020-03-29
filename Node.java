@@ -34,7 +34,7 @@ public class Node<E>{
      * Getter method to return next
      * @return the next node in the linked list
      */
-    private Node<E> getNext(){
+    public Node<E> getNext(){
         return next;
     }
 
@@ -42,7 +42,7 @@ public class Node<E>{
      * Getter method to return element
      * @return the element stored within this node
      */
-    private E getElement(){
+    public E getElement(){
         return element;
     }
 
@@ -50,7 +50,7 @@ public class Node<E>{
      * Setter method to set the value of next
      * @param next_ the value that will replace the current value of next
      */
-    private void setNext(Node<E> next_){
+    public void setNext(Node<E> next_){
         next = next_;
     }
     
@@ -58,7 +58,7 @@ public class Node<E>{
      * Setter method to set the value of element
      * @param element_ the value that will replace the current element
      */
-    private void setElement(E element_){
+    public void setElement(E element_){
         element = element_;
     }
 
