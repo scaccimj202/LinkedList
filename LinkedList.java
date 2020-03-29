@@ -131,4 +131,15 @@
         return currentPosition;
     }
 
+    /**
+     * Method moves the current node to that indicated by position parameter.
+     * @param position node in LinkedList that will be set to current
+     */
+    public void moveToPosition(int position){
+        assert (position >= 0) && (position <= sizeOfList) : "Position out of range";
+        current = head;
+        for(int i = 0; i < position; i++)
+            current = current.getNext();
+    }
+
  }
