@@ -91,7 +91,7 @@
     }
     
     /**
-     * Method sets the current node to the previous node(One to the left).
+     * Method sets the current node that of one node to the left.
      */
     public void prev(){
         if(current == head) 
@@ -101,4 +101,21 @@
             temp = temp.getNext();
         current = temp;
     }
+
+    /**
+     * Method sets the current node to that of one node to the right.
+     */
+    public void next(){
+        if(current != tail)
+        current = current.getNext();
+    }
+    
+    /**
+     * Method returns the current length of the list.
+     * @return the length of the list
+     */
+    public int length(){
+        return sizeOfList;
+    }
+
  }
