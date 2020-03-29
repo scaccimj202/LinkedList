@@ -23,8 +23,16 @@ public class Node<E>{
     }
 
     /**
+     * Node Constructor that takes a Node
+     * @param next_ node to be set to next
+     */
+    Node(Node<E> next_){
+        next = next_;
+    }
+
+    /**
      * Getter method to return next
-     * @return next the next node in the linked list
+     * @return the next node in the linked list
      */
     private Node<E> getNext(){
         return next;
@@ -32,7 +40,7 @@ public class Node<E>{
 
     /**
      * Getter method to return element
-     * @return element the element stored within this node
+     * @return the element stored within this node
      */
     private E getElement(){
         return element;
