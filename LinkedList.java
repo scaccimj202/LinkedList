@@ -44,11 +44,22 @@
      * Method inserts a new node into the LinkedList.
      * @param new_ element to be added to the LinkedList
      */
-    public void insert(E new_){
-        current.setNext(new Node<E>(new_, current.getNext()));
+    public void insert(E element){
+        current.setNext(new Node<E>(element, current.getNext()));
         if(tail == current)
             tail = current.getNext();
         sizeOfList++;
     }
+
+    /**
+     * Method takes an element and adds it to the back of the LinkedList
+     * @param element the element to be appended to the LinkedList
+     */
+    public void append(E element){
+        tail.setNext(new Node<E>(element, null));
+        tail = tail.getNext();
+        sizeOfList++;
+    }
+
 
  }
