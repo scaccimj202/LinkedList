@@ -83,4 +83,22 @@
         current = head;
     }
 
+    /**
+     * Sets the current node to the tail of the LinkedList.
+     */
+    public void moveToEnd(){
+        current = tail;
+    }
+    
+    /**
+     * Method sets the current node to the previous node(One to the left).
+     */
+    public void prev(){
+        if(current == head) 
+            return;
+        Node<E> temp = head;
+        while(temp.getNext() != current)
+            temp = temp.getNext();
+        current = temp;
+    }
  }
