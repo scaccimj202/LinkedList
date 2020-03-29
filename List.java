@@ -60,19 +60,19 @@ public interface List<E>{
      * Returns the number of elements in the list.
      * @return the number of elements in the list.
      */
-    public int lenght();
+    public int length();
 
     /**
      * Returns the position of the current element.
      * @return the position of the current element.
      */
-    public int currPost();
+    public int currPos();
 
     /**
      * Moves current position from its *current* position to the value passed.
      * @param post the position to be moved to.
      */
-    public void moveToPost(int post);
+    public void moveToPos(int post);
 
     /**
      * Return the current element.

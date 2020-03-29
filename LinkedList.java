@@ -122,7 +122,7 @@
      * Method gets the integer value of the current node in the LinkedList.
      * @return the integer value of the current node
      */
-    public int currentPosition(){
+    public int currPos(){
         Node<E> temp = head;
         int currentPosition;
         for(currentPosition= 0; current != temp; currentPosition++){
@@ -135,11 +135,21 @@
      * Method moves the current node to that indicated by position parameter.
      * @param position node in LinkedList that will be set to current
      */
-    public void moveToPosition(int position){
+    public void moveToPos(int position){
         assert (position >= 0) && (position <= sizeOfList) : "Position out of range";
         current = head;
         for(int i = 0; i < position; i++)
             current = current.getNext();
     }
 
+    /**
+     * Method returns the current element. Since we are node before 'current' we 
+     * check that current.getNext() is not null.
+     * @return the current element in the LinkedList
+     */
+    public E getValue(){
+        if(current.getNext() == null)
+            return null;
+        return current.getNext().getElement();
+    }
  }
