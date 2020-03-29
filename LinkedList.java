@@ -61,5 +61,26 @@
         sizeOfList++;
     }
 
+    /**
+     * Method removes an element from the list.
+     * @return the current element
+     */
+    public E remove(){
+        if(current.getNext() == null)
+            return null;
+        E element = current.getNext().getElement();
+        if(tail == current.getNext())
+            tail = current;
+        current.setNext(current.getNext().getNext());
+        sizeOfList--;
+        return element;
+    }
+
+    /**
+     * Sets the current node to the head of the LinkedList.
+     */
+    public void moveToStart(){
+        current = head;
+    }
 
  }
