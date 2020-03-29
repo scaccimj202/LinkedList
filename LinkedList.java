@@ -118,4 +118,17 @@
         return sizeOfList;
     }
 
+    /**
+     * Method gets the integer value of the current node in the LinkedList.
+     * @return the integer value of the current node
+     */
+    public int currentPosition(){
+        Node<E> temp = head;
+        int currentPosition;
+        for(currentPosition= 0; current != temp; currentPosition++){
+            temp = temp.getNext();
+        }
+        return currentPosition;
+    }
+
  }
