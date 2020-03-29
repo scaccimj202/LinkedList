@@ -16,13 +16,28 @@
 
     /**
      * Constructor - ignores size.
+     * @param size the initial size of the list.
      */
     LinkedList(int size_){
         this();
     }
 
+    /**
+     * Constructor for the LinkedList class
+     */
     LinkedList(){
         current = head = tail = new Node<E>(null);
         sizeOfList = 0;
     }
+
+    /**
+     * Method clears list by dropping pointer at head node.
+     * Creates a new blank head node and incrememnts the size of the list.
+     */
+    public void clear(){
+        head.setNext(null);
+        current = tail = head = new Node<E>(null);
+        sizeOfList++;
+    }
+
  }
